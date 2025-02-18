@@ -2,19 +2,14 @@ body {
 
     background: linear-gradient(to bottom right, rgb(250, 250, 250), rgba(0, 0, 255, 0.5));
     display: flex;
-    justify-content: flex-end; /* Alinea al contenedor a la derecha */
-    align-items: stretch; /* Asegura que el contenedor ocupe toda la altura */
     height: 100vh;
     margin: 0;
     background-image: url('./imagen.jpg');
     background-size: contain; /* Cambiado a contain para mantener la relación de aspecto */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    display: flex;
     justify-content: center;
     align-items: center; /* Centra el contenido verticalmente */
-    height: 100vh;
-    margin: 0;
     padding-bottom: 10px; /* Añadido para dar un poco de espacio desde el borde inferior */
 }
 
