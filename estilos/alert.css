@@ -1,0 +1,19 @@
+/* alert.css */
+.alert {
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.alert-danger {
+    background-color: #fde8e8;
+    color: #e74c3c;
+    border: 1px solid #fabdbd;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #4caf50;
+    border: 1px solid #c8e6c9;
+}

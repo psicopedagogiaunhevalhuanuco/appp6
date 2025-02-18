@@ -1,0 +1,33 @@
+Hito: Implementación de un Formulario de Inicio de Sesión Modular
+Descripción General
+Este hito describe la implementación de un formulario de inicio de sesión utilizando una estructura modular para HTML, CSS y JavaScript. La modularidad mejora la mantenibilidad, la reutilización y la organización del código. A continuación, se detallan los elementos creados y sus respectivas descripciones.
+
+Estructura del Proyecto
+index.html: Archivo principal HTML que incluye las referencias a los módulos CSS y JavaScript.
+estilos/: Carpeta que contiene los módulos CSS.
+js/: Carpeta que contiene los módulos JavaScript.
+.env: Archivo que contiene las credenciales de los usuarios.
+Archivos y Descripciones
+HTML
+
+index.html: Contiene la estructura del formulario de inicio de sesión y las referencias a los módulos CSS y JavaScript.
+CSS
+
+reset.css: Restablece los estilos predeterminados del navegador para asegurar una base consistente.
+container.css: Estilos para el contenedor principal del formulario.
+form.css: Estilos para el formulario y sus elementos.
+button.css: Estilos para los botones del formulario.
+alert.css: Estilos para las alertas que se muestran en la interfaz de usuario.
+input.css: Estilos para los campos de entrada del formulario.
+password-strength.css: Estilos para el indicador de fortaleza de la contraseña.
+JavaScript
+
+sanitizeInput.js: Función para sanitizar las entradas del usuario, eliminando caracteres peligrosos.
+validateEmail.js: Función para validar el formato del correo electrónico utilizando una expresión regular.
+validatePassword.js: Función para validar la contraseña, asegurándose de que cumpla con los requisitos de longitud, mayúsculas, minúsculas, números y caracteres especiales.
+evaluatePasswordStrength.js: Función para evaluar la fortaleza de la contraseña y actualizar el indicador de fortaleza visualmente.
+lockForm.js: Función para bloquear el formulario después de varios intentos fallidos de inicio de sesión.
+showAlert.js: Función para mostrar alertas en la interfaz de usuario.
+loginForm.js: Lógica principal del formulario de inicio de sesión, incluyendo la validación de entradas, el manejo de intentos fallidos y la autenticación simulada.
+Resumen
+Este hito asegura que el formulario de inicio de sesión esté bien estructurado, modular y seguro. La modularidad facilita la mantenibilidad y la reutilización del código, mientras que las prácticas de seguridad implementadas protegen contra posibles vulnerabilidades.

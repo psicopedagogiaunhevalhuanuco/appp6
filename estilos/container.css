@@ -1,0 +1,51 @@
+body {
+    background: linear-gradient(to bottom right, rgb(250, 250, 250), rgba(0, 0, 255, 0.5));
+    display: flex;
+    justify-content: flex-end; /* Alinea al contenedor a la derecha */
+    align-items: stretch; /* Asegura que el contenedor ocupe toda la altura */
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Color blanco con opacidad para semitransparencia */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 600px; /* Aumentado de 400px a 500px */
+    height: 100%; /* Hace que el contenedor ocupe toda la altura */
+    max-width: 90%;
+    position: relative;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    z-index: 1; /* Asegura que el contenedor esté delante */
+}
+
+h2 {
+    color: #a181ed;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 4em; /* Aumenta el tamaño del texto */
+    border: 2px solid #a181ed; /* Añade un borde con el mismo color */
+    padding: 10px; /* Añade algo de espacio entre el borde y el texto */
+    border-radius: 8px; /* Añade bordes redondeados */
+}
+
+
+.image {
+    position: absolute;
+    top: 50%; /* Ajusta según sea necesario */
+    left: 0%; /* Poner la imagen al lado izquierdo */
+    width: 600x;
+    height: 600px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: -1;
+    transform: translate(25%, -50%); /* Solo movemos en el eje Y para centrar verticalmente */
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
