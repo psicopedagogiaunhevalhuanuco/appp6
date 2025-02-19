@@ -4,7 +4,7 @@ function checkUserSession() {
         document.getElementById('welcomeMessage').innerText = `Bienvenido, ${user.username}`;
         loadUserContent(user.userType);
     } else {
-        window.location.href = '../index.html'; // Ajusta la ruta según la ubicación del archivo
+        window.location.href = '../Userpage/html/User att.html'; // Ajusta la ruta según la ubicación del archivo
     }
 }
 
