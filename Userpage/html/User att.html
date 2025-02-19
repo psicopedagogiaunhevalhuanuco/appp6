@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Intervención Psicopedagógica</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="module">
+        import { checkUserSession } from '../js/checkSession.js';
+        window.onload = checkUserSession;
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile">
+                    <img src="" alt="Foto de perfil" class="profile-img" id="profile-img">
+                    <div class="profile-info">
+                        <h2>Dr. María Rodríguez</h2>
+                        <p>Psicopedagoga</p>
+                        <label for="upload-img" class="custom-file-upload">Elegir archivo</label>
+                        <input type="file" id="upload-img" accept="image/*">
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="active" data-section="intervencion">Intervención Psicopedagógica</li>
+                        <li data-section="registro">Registro de Intervenciones</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="intervencion" class="section active">
+                <h2>Intervención Psicopedagógica</h2>
+                <div class="card">
+                    <h3>Datos del Estudiante</h3>
+                    <form id="intervencion-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha de Intervención</label>
+                            <input type="date" id="fecha" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="carrera">Carrera Profesional</label>
+                            <input type="text" id="carrera" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="motivo">Motivo de la Intervención</label>
+                            <textarea id="motivo" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Iniciar Intervención</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="registro" class="section">
+                <h2>Registro de Intervenciones y Sesiones de Trabajo</h2>
+                <div id="intervenciones-container">
+                    <p>No hay intervenciones registradas.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

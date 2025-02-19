@@ -1,4 +1,3 @@
-// loginForm.js
 import { sanitizeInput } from './sanitizeInput.js';
 import { validateEmail } from './validateEmail.js';
 import { validatePassword } from './validatePassword.js';
@@ -64,10 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Simulación de redirección
                 setTimeout(() => {
-                    alert.style.display = 'none';
-                    loginForm.reset();
-                    document.getElementById('passwordStrengthMeter').className = 'password-strength-meter';
-                    document.getElementById('strengthText').textContent = '';
+                    localStorage.setItem('user', JSON.stringify({ username: 'usuarioEjemplo', userType: 'admin' })); // Ajusta el tipo de usuario aquí
+                    window.location.href = 'Userpage/User att.html'; // Redirige a la página principal en la carpeta Userpage
                 }, 2000);
             } else {
                 failedAttempts++;

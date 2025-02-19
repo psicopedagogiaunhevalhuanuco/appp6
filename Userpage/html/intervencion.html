@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervención Psicopedagógica</title>
+    <link rel="stylesheet" href="../css/intervencion.css">
+</head>
+<body>
+    <h2>Intervención Psicopedagógica</h2>
+    <div class="card">
+        <h3>Datos del Estudiante</h3>
+        <form id="intervencion-form">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Intervención</label>
+                <input type="date" id="fecha" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="carrera">Carrera Profesional</label>
+                <input type="text" id="carrera" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="motivo">Motivo de la Intervención</label>
+                <textarea id="motivo" class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn">Iniciar Intervención</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,13 +1,15 @@
+Diario de Desarrollo Modificado
 Hito: Implementación de un Formulario de Inicio de Sesión Modular
 Descripción General
 Este hito describe la implementación de un formulario de inicio de sesión utilizando una estructura modular para HTML, CSS y JavaScript. La modularidad mejora la mantenibilidad, la reutilización y la organización del código. A continuación, se detallan los elementos creados y sus respectivas descripciones.
 
 Estructura del Proyecto
+
 index.html: Archivo principal HTML que incluye las referencias a los módulos CSS y JavaScript.
 estilos/: Carpeta que contiene los módulos CSS.
 js/: Carpeta que contiene los módulos JavaScript.
-.env: Archivo que contiene las credenciales de los usuarios.
 Archivos y Descripciones
+
 HTML
 
 index.html: Contiene la estructura del formulario de inicio de sesión y las referencias a los módulos CSS y JavaScript.
@@ -29,5 +31,118 @@ evaluatePasswordStrength.js: Función para evaluar la fortaleza de la contraseñ
 lockForm.js: Función para bloquear el formulario después de varios intentos fallidos de inicio de sesión.
 showAlert.js: Función para mostrar alertas en la interfaz de usuario.
 loginForm.js: Lógica principal del formulario de inicio de sesión, incluyendo la validación de entradas, el manejo de intentos fallidos y la autenticación simulada.
-Resumen
-Este hito asegura que el formulario de inicio de sesión esté bien estructurado, modular y seguro. La modularidad facilita la mantenibilidad y la reutilización del código, mientras que las prácticas de seguridad implementadas protegen contra posibles vulnerabilidades.
+config.prod.js: Archivo de configuración para el entorno de producción.
+
+
+/Login Form
+  /estilos
+    alert.css
+    button.css
+    container.css
+    form.css
+    imagen.jpg
+    input.css
+    password-strength.css
+  /js
+    config.prod.js
+    evaluatePasswordStrength.js
+    lockForm.js
+    loginForm.js
+    sanitizeInput.js
+    showAlert.js
+    validateEmail.js
+    validatePassword.js
+   /Userpage
+  History.txt
+  index.html
+  package-lock.json
+  package.json
+  README.md
+  webpack.config.js
+
+Diario de Desarrollo Modificado
+Fecha: 19 de febrero de 2025
+
+Hito: Implementación de Funcionalidades Avanzadas en la Página de Usuario
+
+Descripción General Este hito describe las actividades realizadas hoy para mejorar la página de usuario, incluyendo la implementación de una imagen de perfil con una silueta por defecto, la posibilidad de subir y redimensionar imágenes, y la organización modular del código.
+
+Acciones Realizadas
+
+Modularización del Código: Se organizó el código HTML, CSS y JavaScript en una estructura modular dentro de la carpeta Userpage para mejorar la mantenibilidad y la organización del proyecto.
+
+Implementación de Imagen de Perfil con Silueta por Defecto:
+
+Se añadió una imagen de silueta por defecto utilizando una imagen SVG codificada en base64.
+Se implementó un input de tipo file para permitir la subida de una imagen de perfil.
+Redimensionamiento y Almacenamiento de Imágenes:
+
+Se añadió funcionalidad en JavaScript para redimensionar la imagen subida y ajustarla al tamaño deseado.
+Se implementó el almacenamiento de la imagen en localStorage para mantener la imagen de perfil incluso después de recargar la página.
+Ajuste de Estilos y Responsividad:
+
+Se aumentó el tamaño del contenedor de la imagen de perfil y se ajustó su posición para que no sobreponga otros elementos.
+Se aseguraron estilos responsivos para que la interfaz se vea bien en dispositivos móviles.
+Actualización de la Estructura del Proyecto:
+
+Se actualizó la estructura del proyecto principal para incluir la carpeta Userpage con todos los archivos y carpetas organizados de manera modular.
+Estructura del Proyecto Actualizada
+
+/Login Form
+│
+├── /estilos
+│   ├── alert.css
+│   ├── button.css
+│   ├── container.css
+│   ├── form.css
+│   ├── imagen.jpg
+│   ├── input.css
+│   ├── password-strength.css
+│
+├── /js
+│   ├── config.prod.js
+│   ├── evaluatePasswordStrength.js
+│   ├── lockForm.js
+│   ├── loginForm.js
+│   ├── sanitizeInput.js
+│   ├── showAlert.js
+│   ├── validateEmail.js
+│   ├── validatePassword.js
+│
+├── /Userpage
+│   ├── /html
+│   │   ├── User att.html
+│   │   ├── intervencion.html
+│   │   ├── registro.html
+│   │   └── (otros archivos HTML)
+│   │
+│   ├── /css
+│   │   ├── styles.css
+│   │   ├── intervencion.css
+│   │   ├── registro.css
+│   │   └── (otros archivos CSS)
+│   │
+│   ├── /js
+│   │   ├── main.js
+│   │   ├── intervencion.js
+│   │   ├── registro.js
+│   │   └── (otros archivos JS)
+│   │
+│   └── /assets
+│       ├── /images
+│       │   ├── profile.jpg
+│       │   └── (otras imágenes)
+│       │
+│       ├── /fonts
+│       │   ├── custom-font.ttf
+│       │   └── (otras fuentes)
+│       │
+│       └── /videos
+│           └── (otros videos)
+│
+├── History.txt
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── webpack.config.js
