@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Simulación de redirección
                 setTimeout(() => {
                     localStorage.setItem('user', JSON.stringify({ username: 'usuarioEjemplo', userType: 'admin' })); // Ajusta el tipo de usuario aquí
-                    window.location.href = '/Login Form/Userpage/html/User att.html'; // Redirige a la página principal en la carpeta Userpage
+                    window.location.href = '../Userpage/html/Useratt.html'; // Redirige a la página principal en la carpeta Userpage
                 }, 2000);
             } else {
                 failedAttempts++;
