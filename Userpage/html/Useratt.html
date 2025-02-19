@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Intervención Psicopedagógica</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script type="module">
-        import { checkUserSession } from '/Login Form/js/checkSession.js';
-        window.onload = checkUserSession;
-    </script>
 </head>
 <body>
     <header>
@@ -69,7 +65,10 @@
             </section>
         </main>
     </div>
-
+    <script type="module">
+        import { checkUserSession } from '/Login Form/js/checkSession.js';
+        window.onload = checkUserSession;
+    </script>
     <script src="../js/main.js"></script>
 </body>
 </html>
