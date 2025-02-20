@@ -10,14 +10,13 @@
     <header>
         <div class="container">
             <div class="header-content">
-               ="Foto de perfil" class="profile-img" id="profile-img">
+                <div class="profile">
+                    <img src="" alt="Foto de perfil" class="profile-img" id="profile-img">
                     <div class="profile-info">
                         <h2>Dr. María Rodríguez</h2>
                         <p>Psicopedagoga</p>
                         <label for="upload-img" class="custom-file-upload">Elegir archivo</label>
                         <input type="file" id="upload-img" accept="image/*">
-                        <button id="save-img" class="btn">Guardar Imagen</button>
-                        <button id="load-img" class="btn">Cargar Imagen</button>
                     </div>
                 </div>
                 <nav>
@@ -71,59 +70,5 @@
         window.onload = checkUserSession;
     </script>
     <script src="../js/main.js"></script>
-
-    <!-- Script para manejar la subida y carga de la imagen usando File System Access API -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const img = document.getElementById('profile-img');
-            const uploadInput = document.getElementById('upload-img');
-            const saveButton = document.getElementById('save-img');
-            const loadButton = document.getElementById('load-img');
-
-            // Manejar la subida de la imagen
-            uploadInput.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        img.src = e.target.result;
-                    };
-                    reader.readAsDataURL(file);
-                }
-            });
-
-            // Guardar la imagen en el sistema de archivos del usuario
-            saveButton.addEventListener('click', async function() {
-                const fileHandle = await window.showSaveFilePicker({
-                    types: [{
-                        description: 'Imagen',
-                        accept: { 'image/*': ['.png', '.jpg', '.jpeg'] }
-                    }]
-                });
-                const writable = await fileHandle.createWritable();
-                const response = await fetch(img.src);
-                const blob = await response.blob();
-                await writable.write(blob);
-                await writable.close();
-                alert('Imagen guardada con éxito');
-            });
-
-            // Cargar la imagen desde el sistema de archivos del usuario
-            loadButton.addEventListener('click', async function() {
-                const [fileHandle] = await window.showOpenFilePicker({
-                    types: [{
-                        description: 'Imagen',
-                        accept: { 'image/*': ['.png', '.jpg', '.jpeg'] }
-                    }]
-                });
-                const file = await fileHandle.getFile();
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    img.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            });
-        });
-    </script>
 </body>
 </html>
