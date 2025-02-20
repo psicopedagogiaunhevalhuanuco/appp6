@@ -4,24 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const uploadInput = document.getElementById('upload-img');
 
     // Cargar la imagen guardada al iniciar la página
-    async function loadImage() {
-        try {
-            const fileHandle = await window.showOpenFilePicker({
-                types: [{
-                    description: 'Images',
-                    accept: {'image/*': ['.png', '.gif', '.jpeg', '.jpg']}
-                }],
-                excludeAcceptAllOption: true,
-                multiple: false
-            });
-            const file = await fileHandle[0].getFile();
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                img.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        } catch (error) {
-            console.log('No image loaded');
+    function loadImage() {
+        const storedImage = localStorage.getItem('profileImage');
+        if (storedImage) {
+            img.src = storedImage;
+        } else {
+            img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj4KICA8Y2lyY2xlIGN4PSIyNSIgY3k9IjI1IiByPSIyNSIgZmlsbD0iI2NjYyIgLz4KICA8cGF0aCBkPSJNMTIuNSAyNSBhMTIuNSAxMi41IDAgMSAxIDI1IDAgMTIuNSAxMi41IDAgMCAxLTI1IDB6bTAgMjVjLTcuNzUgMC0xNSAzLjg3LTE1IDUuNzV2Mi41aDMwdi0yLjVjMC0xLjg4LTcuMjUtNS43NS0xNS01Ljc1eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+Cg==';
         }
     }
 
@@ -36,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }]
             });
             const writableStream = await newHandle.createWritable();
-            await writableStream.write(file);
+            await writableStream.write(await file.arrayBuffer());
             await writableStream.close();
         } catch (error) {
             console.log('Image not saved');
@@ -50,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const reader = new FileReader();
             reader.onload = function(e) {
                 img.src = e.target.result;
+                localStorage.setItem('profileImage', e.target.result); // Guardar en localStorage
                 saveImage(file);
             };
             reader.readAsDataURL(file);
