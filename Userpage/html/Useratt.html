@@ -11,7 +11,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile">
-                    alt="Foto de perfil" class="profile-img" id="profile-img">
+                    <img src="" alt="Foto de perfil" class="profile-img" id="profile-img">
                     <div class="profile-info">
                         <h2 id="welcomeMessage">Bienvenido</h2>
                         <h2>Psicólgos</h2>
@@ -20,7 +20,8 @@
                         <input type="file" id="upload-img" accept="image/*">
                     </div>
                 </div>
-                <ul>
+                <nav>
+                    <ul>
                         <li class="active" data-section="intervencion">Intervención Psicopedagógica</li>
                         <li data-section="registro">Registro de Intervenciones</li>
                     </ul>
@@ -65,12 +66,11 @@
             </section>
         </main>
     </div>
-    <div id="userContent"></div> <!-- Añadir este elemento -->
     <script type="module">
-        import { checkUserSession } from '/appp6/Login Form/js/checkSession.js';
+        import { checkUserSession } from '/appp6/js/checkSession.js';
         window.onload = checkUserSession;
     </script>
     <script src="../js/main.js"></script>
-    <script src="../js/profileImageHandler.js"></script>
+     <script src="../js/profileImageHandler.js"></script>
 </body>
 </html>
