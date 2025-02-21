@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', async function() {
     const isPersisted = await navigator.storage.persist();
     console.log(`Persistencia de almacenamiento: ${isPersisted ? 'concedida' : 'denegada'}`);
 
+    // Verificar si el almacenamiento es persistente
+    const isPersistedCheck = await navigator.storage.persisted();
+    console.log(`Almacenamiento persistente: ${isPersistedCheck ? 'Sí' : 'No'}`);
+
     // Abrir la base de datos IndexedDB
     let db;
     const request = indexedDB.open('profileDB', 1);
