@@ -9,11 +9,14 @@ function checkUserSession() {
 }
 
 function loadUserContent(userType) {
-    const userContent = document.getElementById('userContent');
     if (userType === 'admin') {
-        userContent.innerHTML = '<p>Contenido exclusivo para administradores.</p>';
+        // Mostrar elementos específicos para administradores
+        document.getElementById('intervencion-form').style.display = 'block';
+        document.getElementById('registro').style.display = 'block';
     } else {
-        userContent.innerHTML = '<p>Contenido para usuarios regulares.</p>';
+        // Mostrar elementos específicos para usuarios regulares
+        document.getElementById('intervencion-form').style.display = 'block';
+        document.getElementById('registro').style.display = 'none';
     }
 }
 
