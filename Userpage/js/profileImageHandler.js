@@ -1,6 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function() {
     const img = document.getElementById('profile-img');
     const uploadInput = document.getElementById('upload-img');
+
+    // Solicitar almacenamiento persistente
+    const isPersisted = await navigator.storage.persist();
+    console.log(`Persistencia de almacenamiento: ${isPersisted ? 'concedida' : 'denegada'}`);
 
     // Abrir la base de datos IndexedDB
     let db;
